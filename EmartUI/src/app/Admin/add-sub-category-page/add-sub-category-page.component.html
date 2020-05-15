@@ -1,0 +1,59 @@
+
+<div id="t">
+
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+<div class="container"  id="u" style="height: 300;width: max-content;background-color:black;">
+    <div class="card-body" >
+        <form [formGroup]="addsubcategoryform" (ngSubmit)="onSubmit()"  >
+           
+            <div class="form-group">
+                <h2 style="color:black;background-color:gold;">Adding Sub Category</h2>
+                    <label>sub category Name</label>
+                    <input type="text" formControlName="subcategoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryname.errors }" />
+                    <div *ngIf="submitted && f.subcategoryname.errors" class="invalid-feedback">
+                        <div *ngIf="f.subcategoryname.errors.required">name is required</div>
+                     
+                    </div>
+             </div>
+             <div class="form-group">
+                <label style="color:gold;">Choose Category</label>
+            
+                <select formControlName="categoryid" class="form-control" >
+                     <option *ngFor="let item of clist" value="{{item.cid}}">{{item.cname}}</option>   
+                </select>
+            </div>
+                <div class="form-group">
+                    <label>GST</label>
+                    <input type="number" formControlName="GST" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.GST.errors }" />
+                    <div *ngIf="submitted && f.GST.errors" class="invalid-feedback">
+                        <div *ngIf="f.GST.errors.required">GST is required</div>
+                     
+                    </div>
+                </div>
+           
+            <div class="form-group">
+                    <label>Brief Details</label>
+                    <input type="text" formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" />
+                    <div *ngIf="submitted && f.briefdetails.errors" class="invalid-feedback">
+                        <div *ngIf="f.briefdetails.errors.required">Brief details is required</div>
+                    </div>
+            </div>
+             
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Submit</button>
+          </div>
+        </form>
+    </div>
+</div>
+</div>

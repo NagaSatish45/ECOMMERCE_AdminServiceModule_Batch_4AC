@@ -1,0 +1,41 @@
+{
+  "ReRoutes": [
+    {
+
+      "DownstreamPathTemplate": "/AdminService/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+
+          "Port": 52406
+        }
+
+
+      ],
+      "UpstreamPathTemplate": "/Admin/{catchAll}"
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/AdminClientService/{catchAll}",
+      "DownstreamScheme":"http",
+      "DownstreamHostAndPorts":[
+        {
+          "Host": "localhost",
+
+          "Port": 55564
+        }
+
+
+      ],
+      "UpstreamPathTemplate":"/AdminClient/{catchAll}"
+    },
+    
+ ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:59011"
+  }
+
+
+}

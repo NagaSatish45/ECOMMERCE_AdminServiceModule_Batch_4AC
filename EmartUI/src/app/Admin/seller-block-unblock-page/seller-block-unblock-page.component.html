@@ -1,0 +1,17 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr id="e">
+            <th>SellerName</th>
+            <th>KYC Aproval</th>
+                <th>Block</th>
+        </tr>
+        <tr id="r" *ngFor="let item of seller">
+           <td>{{item.sellerName}}</td>
+           <td>{{item.kycAproval}}</td>
+           <td> <label class="switch"><input type="checkbox"> <span class="slider round"></span> </label>
+           
+        </td>
+          
+        </tr>
+    </table>
+</div>

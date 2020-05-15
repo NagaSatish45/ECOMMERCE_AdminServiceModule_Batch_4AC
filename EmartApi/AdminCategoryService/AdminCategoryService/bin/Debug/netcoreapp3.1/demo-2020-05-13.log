@@ -1,0 +1,142 @@
+2020-05-13 08:32:08.6078||DEBUG|AdminCategoryService.Program|init main function 
+2020-05-13 08:33:38.2318||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching categories by id 
+2020-05-13 08:33:55.5794||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching categories by id 
+2020-05-13 08:34:08.4327||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 34 categories. 
+2020-05-13 08:37:11.9491||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 34 categories. 
+2020-05-13 08:37:29.3962||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 34 categories. 
+2020-05-13 08:37:34.9403||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 08:37:39.1553||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 08:37:44.8122||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 3 sellers 
+2020-05-13 08:38:06.4395||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 34 categories. 
+2020-05-13 08:39:26.2415||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:40:19.3279||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:40:26.8150||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 08:42:33.2371||DEBUG|AdminCategoryService.Program|init main function 
+2020-05-13 08:43:39.3548||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:43:46.1646||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:43:47.0733||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 08:44:28.1445||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 08:44:28.9289||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 3 sellers 
+2020-05-13 08:44:30.2047||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:44:34.8815||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 35 categories. 
+2020-05-13 08:44:37.0033|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (552ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 20) (DbType = AnsiString), @p4='?' (Size = 20) (DbType = AnsiString)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [SubCategory] ([subid], [cid], [gst], [sdetails], [subname])
+VALUES (@p0, @p1, @p2, @p3, @p4); 
+2020-05-13 08:44:38.9280|10000|ERROR|Microsoft.EntityFrameworkCore.Update|An exception occurred in the database while saving changes for context type 'AdminCategoryService.Entities.EmartDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__SubCategory__cid__1A14E395". The conflict occurred in database "EmartDB", table "dbo.Category", column 'cid'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1acde5e9-120b-458c-aa8a-30b9ae31e8a4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__SubCategory__cid__1A14E395". The conflict occurred in database "EmartDB", table "dbo.Category", column 'cid'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1acde5e9-120b-458c-aa8a-30b9ae31e8a4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2020-05-13 08:44:39.0952|1|ERROR|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|An unhandled exception has occurred while executing the request. Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__SubCategory__cid__1A14E395". The conflict occurred in database "EmartDB", table "dbo.Category", column 'cid'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__164_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1acde5e9-120b-458c-aa8a-30b9ae31e8a4
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at AdminCategoryService.Repository.AdminRepositoty.AddSubcategory(SubCategoryModel obj) in G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\Repository\AdminRepositoty.cs:line 67
+   at AdminCategoryService.Manager.AdminManager.AddSubcategory(SubCategoryModel obj) in G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\Manager\AdminManager.cs:line 36
+   at AdminCategoryService.Controllers.AdminServiceController.Addsubcategory(SubCategoryModel obj) in G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\Controllers\AdminServiceController.cs:line 53
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-05-13 08:45:19.6836||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 08:45:20.5245||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 08:45:31.2810||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 08:46:06.8991||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 08:46:20.9312||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 08:46:21.6473||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 3 sellers 
+2020-05-13 08:46:22.3043||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 08:46:23.2164||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 08:46:23.9843||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 14:27:19.6130||DEBUG|AdminCategoryService.Program|init main function 
+2020-05-13 14:27:46.6829||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 14:57:21.7061||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 14:57:23.1276||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 14:57:24.5733||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 14:57:27.2646||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 16:08:13.3102||DEBUG|AdminCategoryService.Program|init main function 
+2020-05-13 16:08:14.9380||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 16:08:17.9404||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:08:17.9404||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 16:08:18.0629||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:09:32.4823||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:09:49.1360||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 3 sellers 
+2020-05-13 16:09:55.8553||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:09:56.6965||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:10:05.4891||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:24:22.8992||DEBUG|AdminCategoryService.Program|init main function 
+2020-05-13 16:24:23.7703||INFO|AdminCategoryService.Controllers.AdminServiceController|fetching  all subcategories 
+2020-05-13 16:24:25.4968||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 7 users 
+2020-05-13 16:24:25.4968||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:24:25.7074||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:24:27.7086||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 
+2020-05-13 16:24:28.7496||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. 

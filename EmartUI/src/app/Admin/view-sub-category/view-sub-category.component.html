@@ -1,0 +1,23 @@
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    <div class="container">
+        <table class="table table-bordered">
+            <tr id="e">
+                <th>SubCategoryName</th>
+                <th>CategoryId</th>
+                    <th>SubcategoryDetails</th>
+                    <th>Delete</th>
+            </tr>
+            <tr id="r" *ngFor="let item of subcategory">
+               <td>{{item.subname}}</td>
+               <td>{{item.cid}}</td>
+               <td>{{item.sdetails}}</td>
+               <td><button type="button"  class="btn btn-danger" (click)="deletecategory(item.subid)">Delete </button>               
+            </td>
+          l,m     
+            </tr>
+        </table>
+    </div>
+    

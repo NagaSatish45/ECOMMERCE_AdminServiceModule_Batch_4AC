@@ -1,0 +1,21 @@
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+    <div class="container">
+        <table class="table table-bordered">
+            <tr id="e">
+                <th>CategoryName</th>
+                <th>CategoryDetails</th>
+                    <th>Delete</th>
+            </tr>
+            <tr id="r" *ngFor="let item of category">
+               <td>{{item.cname}}</td>
+               <td>{{item.cdetails}}</td>
+               <td><button type="button"  class="btn btn-danger" (click)="deletecategory(item.cid)">Delete</button>               
+            </td>
+              
+            </tr>
+        </table>
+    </div>
+    

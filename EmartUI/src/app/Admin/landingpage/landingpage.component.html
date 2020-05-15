@@ -1,0 +1,15 @@
+<div class = "bg">
+    <div class="topnav">
+      
+        <a class="col-sm-2" [routerLink]="['add-category-page']"  > <span class="glyphicon glyphicon-barcode mt-5"></span>AddCategory</a>
+        <a class="col-sm-2" [routerLink]="['add-sub-category-page']"><span class="glyphicon glyphicon-qrcode mt-5"></span>AddSubCategory</a>
+        <a class="col-sm-2" [routerLink]="['view-category']"><span class="glyphicon glyphicon-qrcode mt-5"></span>viewCategory</a>
+        <a class="col-sm-2" [routerLink]="['view-sub-category']"><span class="glyphicon glyphicon-qrcode mt-5"></span>viewSubCategory</a>
+        <a class="col-sm-1"   [routerLink]="['buyer-block-unblock-page']" > <span class="glyphicon glyphicon-barcode mt-5"></span>Un/BBuyer</a>
+        <a class="col-sm-2" [routerLink]="['seller-block-unblock-page']"><span class="glyphicon glyphicon-qrcode mt-5"></span>Un/B Seller</a>
+        <a class="col-sm-1" id="l"  href="login-page" ><i class="glyphicon glyphicon-off mt-5"  ></i>Logout</a>
+    
+    
+      </div>
+      <router-outlet></router-outlet>
+    </div>

@@ -1,0 +1,69 @@
+<!-- <style>
+    form{
+        color:#be79df;
+    }
+</style>
+<div class="container card col-md-5 " style="background-color:transparent;height:400px;float: left;">
+<div id="login-box">
+<div class="logo">
+
+<h1  class="tweak" style="color:#be79df">Login</h1>
+</div><!-- /.logo -->
+<!--<form class="controls" [formGroup]="loginform" >
+    
+<input type="text"  formControlName="uname"  placeholder="Username" class="form-control" />&nbsp;&nbsp;
+<input type="password" formControlName="password"  placeholder="Password" class="form-control" />&nbsp;&nbsp;
+
+<button type="button" class="btn btn-default btn-block btn-custom btn-primary" (click)="Login()">Login</button><br>
+
+
+
+</form> -->
+<div class="bg">
+    <div class="container contact">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <h1>Admin </h1> 
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <form [formGroup]="loginform" (ngSubmit)="Login()">
+                        
+        
+                       <br/>
+                       <br/>
+                        <div class=form group>
+                            <label class="control-label col-sm-2">UserName:</label>
+                            <input type="text" formControlName="uname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username is required</div>
+                                <div *ngIf="f.username.errors.pattern">Enter Username</div>
+                            </div>
+                        
+                        </div>
+
+                        <div class = form group>
+                            <label class="control-label col-sm-2">Password:</label>
+                            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        </div>
+                               &nbsp;
+                               &nbsp;     
+               <div class="form-group">   
+
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                          </div>
+            
+    
+    
+    
+      
+                    </form>
+                </div>
+             </div>
+         </div>
+       </div>
+     </div>

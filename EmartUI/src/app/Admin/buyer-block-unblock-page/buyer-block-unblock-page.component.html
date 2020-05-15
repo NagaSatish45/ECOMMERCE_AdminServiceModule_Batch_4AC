@@ -1,0 +1,23 @@
+
+ <div class="container">
+    <table class="table table-bordered">
+        <tr id="e">
+            <th>UserName</th>
+            <th>noforders</th>
+            <th>noOffailedorders</th>
+                <th>Block</th>
+        </tr>
+        <tr id="r" *ngFor="let item of users">
+           <td>{{item.username}}</td>
+           <td>{{item.nooforders}}</td>
+           <td>{{item.failedorders}}</td>
+           <td>
+          
+            <label class="switch"><input type="checkbox"> <span class="slider round"></span> </label>
+           
+          
+          
+        </td>
+          
+        </tr>
+    </table>
