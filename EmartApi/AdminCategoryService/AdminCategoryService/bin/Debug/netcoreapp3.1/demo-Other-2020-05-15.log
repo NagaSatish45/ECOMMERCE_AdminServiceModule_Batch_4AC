@@ -1,0 +1,2 @@
+2020-05-15 17:36:25.1021||DEBUG|AdminCategoryService.Program|init main function |url: |action: 
+2020-05-15 17:37:18.4750||INFO|AdminCategoryService.Controllers.AdminServiceController|Returning 36 categories. |url: http://localhost/AdminService/GetAllCategory|action: GetAllCategories

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AdminCategoryService</name>
+    </assembly>
+    <members>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.Addcategory(AdminCategoryService.Models.CategoryModel)">
+            <summary>
+            To Add a new category to a table in EmartDB database
+             </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.Addsubcategory(AdminCategoryService.Models.SubCategoryModel)">
+            <summary>
+            To Add a new subcategory to a table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.getcategory(System.Int32)">
+            <summary>
+            fetching a category from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.getsubcategory(System.Int32)">
+            <summary>
+            fetching a subcategory from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.GetAllCategories">
+            <summary>
+            fetching all category from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.GetSubcategories">
+            <summary>
+            fetching all subcategory from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.DeleteCategory(System.Int32)">
+            <summary>
+            Deleting  a category from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.DeleteSubCategory(System.Int32)">
+            <summary>
+            Deleting  a subcategory from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.updatecategory(AdminCategoryService.Models.CategoryModel)">
+            <summary>
+            updating a category from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.updatesubcategory(AdminCategoryService.Models.SubCategoryModel)">
+            <summary>
+            updating  a subcategory from the table in EmartDB database
+            </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.GetUsers">
+             <summary>
+            Get all users from data base
+             </summary>
+        </member>
+        <member name="M:AdminCategoryService.Controllers.AdminServiceController.GetSellers">
+             <summary>
+            Get all sellers from data base
+             </summary>
+        </member>
+    </members>
+</doc>

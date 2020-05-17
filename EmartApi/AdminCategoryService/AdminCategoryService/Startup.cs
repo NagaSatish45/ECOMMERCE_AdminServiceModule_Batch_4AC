@@ -10,8 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Diagnostics.CodeAnalysis;
-
+using System.IO;
+using System.Reflection;
 
 namespace AdminCategoryService
 {
@@ -50,7 +52,18 @@ namespace AdminCategoryService
             });
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdminServices", Version = "v1", Description = "Team 4AC" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdminServices", Version = "v1", Description = "ASP.NET CORE ADMIN SERVICEMODULE",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "4AC-Batch",
+                        Email ="Naga.Mediboina@cognizant.com",
+                        Url = new Uri("https://github.com/NagaSatish45/ECOMMERCE_AdminServiceModule_Batch_4AC"),
+                    },
+                });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory,xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
            
 

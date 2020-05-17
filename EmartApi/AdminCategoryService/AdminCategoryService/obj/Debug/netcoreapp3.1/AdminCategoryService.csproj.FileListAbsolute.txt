@@ -133,3 +133,5 @@ G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\obj\Debug\ne
 G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\obj\Debug\netcoreapp3.1\AdminCategoryService.MvcApplicationPartsAssemblyInfo.cs
 G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\obj\Debug\netcoreapp3.1\AdminCategoryService.MvcApplicationPartsAssemblyInfo.cache
 G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\obj\Debug\netcoreapp3.1\AdminCategoryService.csprojAssemblyReference.cache
+G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\bin\Debug\netcoreapp3.1\AdminCategoryService.xml
+G:\CTS45\angular\EmartApi\AdminCategoryService\AdminCategoryService\obj\Debug\netcoreapp3.1\AdminCategoryService.xml

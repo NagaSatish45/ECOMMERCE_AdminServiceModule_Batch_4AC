@@ -30,7 +30,7 @@
 
       ],
       "UpstreamPathTemplate":"/AdminClient/{catchAll}"
-    },
+    }
     
  ],
   "GlobalConfiguration": {

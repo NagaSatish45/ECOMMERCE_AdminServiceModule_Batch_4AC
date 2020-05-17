@@ -24,9 +24,9 @@ namespace AdminCategoryService.Controllers
             _manager = manager;
         }
         //Adding Category
-        // <summary>
-        // To Add a new category to a table in EmartDB database
-        // </summary>
+        ///<summary>
+        ///To Add a new category to a table in EmartDB database
+        /// </summary>
         [HttpPost]
         [Route("AddCategory")]
         public async Task<IActionResult> Addcategory(CategoryModel obj)
@@ -44,9 +44,9 @@ namespace AdminCategoryService.Controllers
         }
 
         //Adding Subcategory
-        // <summary>
-        // To Add a new subcategory to a table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// To Add a new subcategory to a table in EmartDB database
+        /// </summary>
         [HttpPost]
         [Route("AddSubCategory")]
         public async Task<IActionResult> Addsubcategory(SubCategoryModel obj)
@@ -63,9 +63,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //Fetching Category by id
-        // <summary>
-        // fetching a category from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// fetching a category from the table in EmartDB database
+        /// </summary>
         [HttpGet]
         [Route("getcategory/{cid}")]
         public IActionResult getcategory(int cid)
@@ -82,9 +82,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //fetching sub category by id
-        // <summary>
-        // fetching a subcategory from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// fetching a subcategory from the table in EmartDB database
+        /// </summary>
         [HttpGet]
         [Route("getsubcategory/{subid}")]
         public IActionResult getsubcategory(int subid)
@@ -96,9 +96,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //Getting all the Category
-        // <summary>
-        // fetching all category from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// fetching all category from the table in EmartDB database
+        /// </summary>
         [HttpGet]
         [Route("GetAllCategory")]
         public IActionResult GetAllCategories()
@@ -113,9 +113,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //Getting list of all the sub categories
-        // <summary>
-        // fetching all subcategory from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// fetching all subcategory from the table in EmartDB database
+        /// </summary>
         [HttpGet]
         [Route("GetAllSubcategory")]
         public IActionResult GetSubcategories()
@@ -128,9 +128,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //Deleting category
-        // <summary>
-        // Deleting  a category from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// Deleting  a category from the table in EmartDB database
+        /// </summary>
         [HttpDelete]
         [Route("DeleteCategory/{cid}")]
         public IActionResult DeleteCategory(int cid)
@@ -141,9 +141,9 @@ namespace AdminCategoryService.Controllers
         }
 
         //deleting sub category
-        // <summary>
-        // Deleting  a subcategory from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// Deleting  a subcategory from the table in EmartDB database
+        /// </summary>
         [HttpDelete]
         [Route("DeleteSubCategory/{subid}")]
         public IActionResult DeleteSubCategory(int subid)
@@ -156,9 +156,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //updating category
-        // <summary>
-        // updating a category from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// updating a category from the table in EmartDB database
+        /// </summary>
 
         [HttpPut]
         [Route("updatecategory")]
@@ -170,9 +170,9 @@ namespace AdminCategoryService.Controllers
             throw new Exception("Exception while updating a category t0 the storage.");
         }
         //updating the subcategory
-        // <summary>
-        // updating  a subcategory from the table in EmartDB database
-        // </summary>
+        /// <summary>
+        /// updating  a subcategory from the table in EmartDB database
+        /// </summary>
         [HttpPut]
         [Route("updatesubcategory")]
         public IActionResult updatesubcategory(SubCategoryModel obj)
@@ -188,9 +188,9 @@ namespace AdminCategoryService.Controllers
         }
 
         //Get all Users
-        // <summary>
-        //Get all users from data base
-        // </summary>
+        /// <summary>
+        ///Get all users from data base
+        /// </summary>
         [HttpGet]
         [Route("GetAllUsers")]
         public IActionResult GetUsers()
@@ -204,9 +204,9 @@ namespace AdminCategoryService.Controllers
 
         }
         //Get all sellers
-        // <summary>
-        //Get all sellers from data base
-        // </summary>
+        /// <summary>
+        ///Get all sellers from data base
+        /// </summary>
         [HttpGet]
         [Route("GetAllSellers")]
         public IActionResult GetSellers()
